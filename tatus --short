@@ -1,0 +1,14 @@
+warning: in the working copy of 'app/page.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/discovery/dedupe.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/discovery/pipeline.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'lib/discovery/types.ts', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package-lock.json', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'package.json', LF will be replaced by CRLF the next time Git touches it
+ app/api/discovery/route.ts |  514 [32m++++++++++[m[31m--[m
+ app/page.tsx               | 1868 [32m+++++++++++++++++++++++++++++++++++++++++++[m[31m-[m
+ lib/discovery/dedupe.ts    |  701 [32m+++++++++++++++[m[31m--[m
+ lib/discovery/pipeline.ts  |  888 [32m+++++++++++++++++++[m[31m--[m
+ lib/discovery/types.ts     |    4 [32m+[m[31m-[m
+ package-lock.json          |   16 [32m+[m
+ package.json               |    1 [32m+[m
+ 7 files changed, 3807 insertions(+), 185 deletions(-)

@@ -1,0 +1,27 @@
+services:
+  redis:
+    container_name: autoradar-searxng-redis
+    image: redis:7-alpine
+    restart: unless-stopped
+    command: redis-server --save "" --appendonly no
+    networks:
+      - searxng
+
+  searxng:
+    container_name: autoradar-searxng
+    image: searxng/searxng:latest
+    restart: unless-stopped
+    depends_on:
+      - redis
+    ports:
+      - "8080:8080"
+    environment:
+      - SEARXNG_BASE_URL=http://localhost:8080/
+    volumes:
+      - ./searxng:/etc/searxng:rw
+    networks:
+      - searxng
+
+networks:
+  searxng:
+    driver: bridge

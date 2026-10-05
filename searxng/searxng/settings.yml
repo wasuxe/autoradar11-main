@@ -1,0 +1,54 @@
+use_default_settings: true
+
+general:
+  debug: false
+  instance_name: "AutoRadar Search"
+
+search:
+  safe_search: 0
+  autocomplete: ""
+  default_lang: "en"
+  formats:
+    - html
+    - json
+
+server:
+  bind_address: "0.0.0.0"
+  port: 8080
+  secret_key: "autoradar-local-development-secret-change-this"
+  limiter: false
+  image_proxy: false
+  http_protocol_version: "1.1"
+
+redis:
+  url: redis://redis:6379/0
+
+ui:
+  default_locale: "en"
+  theme_args:
+    simple_style: "auto"
+
+engines:
+  - name: bing
+    disabled: false
+
+  - name: yahoo
+    disabled: false
+
+  - name: brave
+    disabled: true
+
+  - name: duckduckgo
+    disabled: true
+
+  - name: google
+    disabled: true
+
+  - name: google cse
+    disabled: true
+
+  - name: wikipedia
+    disabled: true
+
+  - name: wikidata
+    disabled: true
